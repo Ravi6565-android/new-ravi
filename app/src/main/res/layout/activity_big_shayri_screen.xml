@@ -17,14 +17,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/pre"
-            android:text="<"
+            android:text="pre"
             android:textSize="30sp"
         />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/next"
-            android:text=">"
+            android:text="next"
             android:textSize="30sp"
             android:layout_alignParentRight="true"
 

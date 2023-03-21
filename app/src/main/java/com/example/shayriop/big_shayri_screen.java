@@ -20,10 +20,10 @@ TextView shayri_text;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_big_shayri_screen);
         shayri_text= findViewById(R.id.big_screen);
-        shayri=getIntent().getStringExtra("shayri");
-        temp=getIntent().getStringArrayListExtra("full");
+        //shayri=getIntent().getStringExtra("shayri");
+        temp=getIntent().getStringArrayListExtra("shayri");
         posi=getIntent().getIntExtra("position",0);
-        shayri_text.setText(shayri);
+        shayri_text.setText(temp.get(posi));
         pre=findViewById(R.id.pre);
         next=findViewById(R.id.next);
         pre.setOnClickListener(this);
@@ -34,7 +34,16 @@ TextView shayri_text;
     @Override
     public void onClick(View view) {
         if(view.getId()==pre.getId()){
-            shayri_text.setText(temp.get(posi-1));
+            if(posi!=0) {
+                posi--;
+            }
+            shayri_text.setText(temp.get(posi));
+        }
+        if(view.getId()==next.getId()){
+            if(posi!=temp.size()-1) {
+                posi++;
+            }
+            shayri_text.setText(temp.get(posi));
         }
     }
 }

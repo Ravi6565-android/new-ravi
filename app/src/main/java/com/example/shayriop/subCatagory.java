@@ -50,9 +50,9 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",shubhkamna.get(i));
+
                             intent.putExtra("position",i);
-                            intent.putStringArrayListExtra("full",shubhkamna);
+                            intent.putStringArrayListExtra("shayri",shubhkamna);
                             startActivity(intent);
                         }
                     });
@@ -71,7 +71,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",majedar.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",majedar);
                             startActivity(intent);
                         }
                     });
@@ -84,7 +85,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",bhagvan.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",bhagvan);
                             startActivity(intent);
                         }
                     });
@@ -97,7 +99,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",prernastrot.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",prernastrot);
                             startActivity(intent);
                         }
                     });
@@ -110,7 +113,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",jivan.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",jivan);
                             startActivity(intent);
                         }
                     });
@@ -123,7 +127,8 @@ ListView sublist;
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Intent intent = new Intent(subCatagory.this,big_shayri_screen.class);
-                    intent.putExtra("shayri",mohhabat.get(i));
+                    intent.putExtra("position",i);
+                    intent.putStringArrayListExtra("shayri",mohhabat);
                     startActivity(intent);
                 }
             });
@@ -137,7 +142,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent = new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",yade.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",yade);
                             startActivity(intent);
                         }
                     });
@@ -150,7 +156,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent = new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",anya.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",anya);
                             startActivity(intent);
                         }
                     });
@@ -163,7 +170,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent = new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",rajniti.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",rajniti);
                             startActivity(intent);
                         }
                     });
@@ -176,7 +184,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent = new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",prem.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",prem);
                             startActivity(intent);
                         }
                     });
@@ -189,7 +198,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",dard.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",dard);
                             startActivity(intent);
                         }
                     });
@@ -202,7 +212,8 @@ ListView sublist;
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
-                    intent.putExtra("shayri",bewafa.get(i));
+                    intent.putExtra("position",i);
+                    intent.putStringArrayListExtra("shayri",bewafa);
                     startActivity(intent);
                 }
             });
@@ -217,7 +228,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",sharab.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",sharab);
                             startActivity(intent);
                         }
                     });
@@ -231,7 +243,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",janmadin.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",janmadin);
                             startActivity(intent);
                         }
                     });
@@ -244,7 +257,8 @@ ListView sublist;
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
-                            intent.putExtra("shayri",holi.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("shayri",holi);
                             startActivity(intent);
                         }
                     });
@@ -259,7 +273,8 @@ ListView sublist;
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(subCatagory.this,big_shayri_screen.class);
-                intent.putExtra("shayri",dosti.get(i));
+                intent.putExtra("position",i);
+                intent.putStringArrayListExtra("shayri",dosti);
                 startActivity(intent);
             }
         });
