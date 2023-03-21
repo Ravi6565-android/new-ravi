@@ -47,22 +47,22 @@ catagory_custom_adapter adapter;
        listcatogory=findViewById(R.id.listCatagory);
     }
     public void filltypesofshayri(){
-        typesOfshayri.add("शुभकामना शायरी");
-        typesOfshayri.add("दोस्ती शायरी");
-        typesOfshayri.add("मजेदार शायरी");
-        typesOfshayri.add("भगवान शायरी ");
-        typesOfshayri.add("प्रेरणा स्रोत शायरी");
-        typesOfshayri.add("जीवन शायरी");
-        typesOfshayri.add("मोहब्बत शायरी");
-        typesOfshayri.add("यादें शायरी");
-        typesOfshayri.add("अन्य  शायरी");
-        typesOfshayri.add("राजनीति शायरी");
-        typesOfshayri.add("प्रेम शायरी ");
-        typesOfshayri.add("दर्द शायरी");
-        typesOfshayri.add("बेवफा शायरी");
-        typesOfshayri.add("शराब शायरी ");
-        typesOfshayri.add("जन्मदिन शायरी ");
-        typesOfshayri.add("होली शायरी");
+        typesOfshayri.add("शुभकामना शायरी");//ok
+        typesOfshayri.add("दोस्ती शायरी");//ok
+        typesOfshayri.add("मजेदार शायरी");//ok
+        typesOfshayri.add("भगवान शायरी ");//ok
+        typesOfshayri.add("प्रेरणा स्रोत शायरी");//ok
+        typesOfshayri.add("जीवन शायरी");//ok
+        typesOfshayri.add("मोहब्बत शायरी");//ok
+        typesOfshayri.add("यादें शायरी");//ok
+        typesOfshayri.add("अन्य  शायरी");//ok
+        typesOfshayri.add("राजनीति शायरी");//ok
+        typesOfshayri.add("प्रेम शायरी ");//ok
+        typesOfshayri.add("दर्द शायरी");//ok
+        typesOfshayri.add("बेवफा शायरी");//ok
+        typesOfshayri.add("शराब शायरी ");//ok
+        typesOfshayri.add("जन्मदिन शायरी ");//ok
+        typesOfshayri.add("होली शायरी");//ok
     }
     public void fillimage(){
         image.add(R.drawable.bestwishesh);
