@@ -51,6 +51,8 @@ ListView sublist;
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Intent intent= new Intent(subCatagory.this,big_shayri_screen.class);
                             intent.putExtra("shayri",shubhkamna.get(i));
+                            intent.putExtra("position",i);
+                            intent.putStringArrayListExtra("full",shubhkamna);
                             startActivity(intent);
                         }
                     });

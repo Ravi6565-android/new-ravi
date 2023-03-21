@@ -3,10 +3,17 @@ package com.example.shayriop;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class big_shayri_screen extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class big_shayri_screen extends AppCompatActivity implements View.OnClickListener {
 String shayri="kdk";
+Button pre,next;
+int posi=0;
+ArrayList<String> temp= new ArrayList<>();
 TextView shayri_text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +21,20 @@ TextView shayri_text;
         setContentView(R.layout.activity_big_shayri_screen);
         shayri_text= findViewById(R.id.big_screen);
         shayri=getIntent().getStringExtra("shayri");
+        temp=getIntent().getStringArrayListExtra("full");
+        posi=getIntent().getIntExtra("position",0);
         shayri_text.setText(shayri);
+        pre=findViewById(R.id.pre);
+        next=findViewById(R.id.next);
+        pre.setOnClickListener(this);
+        next.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view.getId()==pre.getId()){
+            shayri_text.setText(temp.get(posi-1));
+        }
     }
 }
