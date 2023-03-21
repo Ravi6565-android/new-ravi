@@ -14,18 +14,16 @@
             android:layout_height="wrap_content"
             >
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
             android:id="@+id/pre"
-            android:text="pre"
-            android:textSize="30sp"
+            android:background="@drawable/back"
         />
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:id="@+id/next"
-            android:text="next"
-            android:textSize="30sp"
+            android:background="@drawable/next"
             android:layout_alignParentRight="true"
 
             />
