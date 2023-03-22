@@ -8,45 +8,110 @@
     tools:context=".big_shayri_screen"
     android:orientation="vertical"
     android:layout_margin="10dp">
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
-        <Button
-            android:layout_width="70dp"
-            android:layout_height="60dp"
-            android:id="@+id/pre"
-            android:background="@drawable/back"
-        />
-        <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/next"
-            android:background="@drawable/next"
-            android:layout_alignParentRight="true"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:text="06/24"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="25sp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/txtcounter"/>
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                        android:background="@drawable/img_2"
+                        android:id="@+id/ibtntheme"
+                        android:layout_toLeftOf="@id/txtcounter"
+                    android:layout_marginRight="20dp"
+                    />
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/img_3"
+                    android:id="@+id/ibtnchange_theme"
+                    android:layout_toRightOf="@id/txtcounter"
+                    android:layout_marginLeft="20dp"
+                    />
 
-            />
         </RelativeLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_weight="1"
             android:gravity="center"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/big_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#03A9F4"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="good mroning"
+                    android:textColor="#EAD83A"
+                    android:textSize="35sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#19AF1F"
+
             >
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/img"
+                   android:layout_centerVertical="true"
+                        android:id="@+id/ibtncopy"
+                    android:layout_marginHorizontal="5dp"
+                        />
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/img_1"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/ibtnedit"
+                  android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="5dp"
+                    />
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/pre"
+                    android:layout_toRightOf="@id/ibtncopy"
+                    android:background="@drawable/back"
+                    android:layout_marginHorizontal="5dp"
 
-     android:textSize="35sp"
-        android:fontFamily="sans-serif-black"
-        android:background="#03A9F4"
-        android:textColor="#EAD83A"
-        android:text="good mroning"
-        android:id="@+id/big_screen"/>
+                    />
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/next"
+                    android:background="@drawable/next"
+                    android:layout_marginHorizontal="5dp"
 
-</LinearLayout>
+                    android:layout_toLeftOf="@id/ibtnshare"
+
+                    />
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/img_4"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/ibtnshare"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="5dp"
+                    />
+        </RelativeLayout>
 </LinearLayout>
