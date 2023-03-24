@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 
@@ -13,6 +16,7 @@ public class big_shayri_screen extends AppCompatActivity implements View.OnClick
 String shayri="kdk";
 Button pre,next;
 TextView txtcounter;
+ImageButton ibtntheme;
 
 int posi=0,size=0;
 ArrayList<String> temp= new ArrayList<>();
@@ -38,8 +42,10 @@ TextView shayri_text;
         pre=findViewById(R.id.pre);
         next=findViewById(R.id.next);
         txtcounter=findViewById(R.id.txtcounter);
+        ibtntheme=findViewById(R.id.ibtntheme);
         pre.setOnClickListener(this);
         next.setOnClickListener(this);
+        ibtntheme.setOnClickListener(this);
     }
 
     @Override
@@ -58,6 +64,10 @@ TextView shayri_text;
             }
             txtcounter.setText((posi+1)+"/"+size);
             shayri_text.setText(temp.get(posi));
+        }
+        if(view.getId()==ibtntheme.getId()){
+            BottomSheetDialog dialog= new BottomSheetDialog(this);
+            dialog.setContentView();
         }
     }
 }
