@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ ImageButton ibtntheme;
 int posi=0,size=0;
 ArrayList<String> temp= new ArrayList<>();
 TextView shayri_text;
+GridView gridView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +69,12 @@ TextView shayri_text;
         }
         if(view.getId()==ibtntheme.getId()){
             BottomSheetDialog dialog= new BottomSheetDialog(this);
-            dialog.setContentView();
+            dialog.setContentView(R.layout.gridview_for_big_shayri);
+            gridView=dialog.findViewById(R.id.grid_big);
+            grid_adpter_for_themes grid_adpter_for_themes= new grid_adpter_for_themes(big_shayri_screen.this,themes.themesop);
+            gridView.setAdapter(grid_adpter_for_themes);
+            dialog.show();
+
         }
     }
 }
