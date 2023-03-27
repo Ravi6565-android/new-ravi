@@ -12,6 +12,9 @@
         android:theme="@style/Theme.ShayriOp"
         tools:targetApi="31">
         <activity
+            android:name=".edit_activity"
+            android:exported="false" />
+        <activity
             android:name=".big_shayri_screen"
             android:exported="false" />
         <activity

@@ -23,7 +23,7 @@
                 <ImageButton
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                        android:background="@drawable/img_2"
+                        android:background="@drawable/extend_buttton"
                         android:id="@+id/ibtntheme"
                         android:layout_toLeftOf="@id/txtcounter"
                     android:layout_marginRight="20dp"
@@ -31,7 +31,7 @@
                 <ImageButton
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/img_3"
+                    android:background="@drawable/thems_bottun"
                     android:id="@+id/ibtnchange_theme"
                     android:layout_toRightOf="@id/txtcounter"
                     android:layout_marginLeft="20dp"
@@ -70,20 +70,19 @@
                 <ImageButton
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/img"
+                    android:background="@drawable/copy"
                    android:layout_centerVertical="true"
                         android:id="@+id/ibtncopy"
                     android:layout_marginHorizontal="5dp"
                         />
+
                 <ImageButton
+                    android:id="@+id/ibtnedit"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/img_1"
-                    android:layout_centerVertical="true"
-                    android:id="@+id/ibtnedit"
-                  android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginHorizontal="5dp"
-                    />
+                    android:background="@drawable/edit_icon" />
                 <Button
                     android:layout_width="70dp"
                     android:layout_height="60dp"
@@ -103,15 +102,15 @@
                     android:layout_toLeftOf="@id/ibtnshare"
 
                     />
+
                 <ImageButton
+                    android:id="@+id/ibtnshare"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/img_4"
-                    android:layout_centerVertical="true"
-                    android:id="@+id/ibtnshare"
-
                     android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+
                     android:layout_marginHorizontal="5dp"
-                    />
+                    android:background="@drawable/share" />
         </RelativeLayout>
 </LinearLayout>
