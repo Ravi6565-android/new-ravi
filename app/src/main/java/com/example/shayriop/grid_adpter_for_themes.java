@@ -1,5 +1,6 @@
 package com.example.shayriop;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,12 +8,14 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 public class grid_adpter_for_themes extends BaseAdapter {
-    big_shayri_screen big_shayri_screen;
+   Context context;
     int[] themesop;
-    public grid_adpter_for_themes(big_shayri_screen big_shayri_screen, int[] themesop) {
-        this.big_shayri_screen=big_shayri_screen;
+    public grid_adpter_for_themes(Context context, int[] themesop) {
+        this.context=context;
         this.themesop=themesop;
     }
+
+
 
     @Override
     public int getCount() {
@@ -31,7 +34,7 @@ public class grid_adpter_for_themes extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view= LayoutInflater.from(big_shayri_screen).inflate(R.layout.grid_items_for_bottom,viewGroup,false);
+        view= LayoutInflater.from(context).inflate(R.layout.grid_items_for_bottom,viewGroup,false);
         TextView textView;
         textView=view.findViewById(R.id.item_for_grid);
         textView.setBackgroundResource(themesop[i]);

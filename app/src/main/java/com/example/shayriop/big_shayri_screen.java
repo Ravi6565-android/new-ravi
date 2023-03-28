@@ -2,6 +2,7 @@ package com.example.shayriop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -95,7 +96,9 @@ GridView gridView;
             }
         }
         if(view.getId()==edit.getId()){
-
+            Intent intent= new Intent(big_shayri_screen.this,edit_activity.class);
+           intent.putExtra("shayri",temp.get(posi));
+            startActivity(intent);
         }
     }
 }
