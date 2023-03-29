@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".big_shayri_screen"
     android:orientation="vertical"
+    android:background="#1976D2"
     android:layout_margin="10dp">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -52,11 +53,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:background="#03A9F4"
+                    android:background="#F3C9DD"
                     android:fontFamily="sans-serif-black"
                     android:gravity="center"
                     android:text="good mroning"
-                    android:textColor="#EAD83A"
+                    android:textColor="#795548"
                     android:textSize="35sp" />
 
         </LinearLayout>
@@ -64,17 +65,17 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#19AF1F"
+            android:background="#1976D2"
 
             >
+
                 <ImageButton
+                    android:id="@+id/ibtncopy"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/copy"
-                   android:layout_centerVertical="true"
-                        android:id="@+id/ibtncopy"
+                    android:layout_centerVertical="true"
                     android:layout_marginHorizontal="5dp"
-                        />
+                    android:background="@drawable/copy" />
 
                 <ImageButton
                     android:id="@+id/ibtnedit"
@@ -83,23 +84,25 @@
                     android:layout_centerInParent="true"
                     android:layout_marginHorizontal="5dp"
                     android:background="@drawable/edit_icon" />
+
                 <Button
+                    android:id="@+id/pre"
                     android:layout_width="70dp"
                     android:layout_height="60dp"
-                    android:id="@+id/pre"
+                    android:layout_marginHorizontal="5dp"
                     android:layout_toRightOf="@id/ibtncopy"
                     android:background="@drawable/back"
-                    android:layout_marginHorizontal="5dp"
 
                     />
+
                 <Button
+                    android:id="@+id/next"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:id="@+id/next"
-                    android:background="@drawable/next"
                     android:layout_marginHorizontal="5dp"
-
                     android:layout_toLeftOf="@id/ibtnshare"
+
+                    android:background="@drawable/next"
 
                     />
 

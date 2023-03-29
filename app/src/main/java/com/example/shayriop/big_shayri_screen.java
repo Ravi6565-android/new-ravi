@@ -2,6 +2,9 @@ package com.example.shayriop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +13,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
@@ -20,7 +24,7 @@ public class big_shayri_screen extends AppCompatActivity implements View.OnClick
 String shayri="kdk";
 Button pre,next;
 TextView txtcounter;
-ImageButton ibtntheme,theme_changer,edit;
+ImageButton ibtntheme,theme_changer,edit,share,copy;
 
 int posi=0,size=0;
 ArrayList<String> temp= new ArrayList<>();
@@ -50,11 +54,15 @@ GridView gridView;
         ibtntheme = findViewById(R.id.ibtntheme);
         theme_changer = findViewById(R.id.ibtnchange_theme);
         edit = findViewById(R.id.ibtnedit);
+        share=findViewById(R.id.ibtnshare);
+        copy=findViewById(R.id.ibtncopy);
         pre.setOnClickListener(this);
         next.setOnClickListener(this);
         ibtntheme.setOnClickListener(this);
         theme_changer.setOnClickListener(this);
         edit.setOnClickListener(this);
+        share.setOnClickListener(this);
+        copy.setOnClickListener(this);
     }
     @Override
     public void onClick(View view) {
@@ -100,5 +108,19 @@ GridView gridView;
            intent.putExtra("shayri",temp.get(posi));
             startActivity(intent);
         }
+        if(view.getId()==share.getId()){
+            Intent txtIntent = new Intent(android.content.Intent.ACTION_SEND);
+            txtIntent .setType("text/plain");
+            txtIntent .putExtra(android.content.Intent.EXTRA_SUBJECT,"shayri");
+            txtIntent .putExtra(android.content.Intent.EXTRA_TEXT, shayri_text.getText());
+            startActivity(Intent.createChooser(txtIntent ,"Share"));
+        }
+        if(view.getId()==copy.getId()){
+            ClipboardManager clipboardManager= (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip=ClipData.newPlainText("copy",shayri_text.getText());
+            clipboardManager.setPrimaryClip(clip);
+            Toast.makeText(this, "text copied", Toast.LENGTH_LONG).show();
+        }
+
     }
 }
