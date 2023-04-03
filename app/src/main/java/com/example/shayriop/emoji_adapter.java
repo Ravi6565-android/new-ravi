@@ -1,6 +1,7 @@
 package com.example.shayriop;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,12 +9,14 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 public class emoji_adapter extends BaseAdapter {
+     String type;
     Context context;
     String[] emoji;
 
-    public emoji_adapter(Context context, String[] emoji) {
+    public emoji_adapter(Context context, String[] emoji, String type) {
     this.context=context;
     this.emoji=emoji;
+    this.type=type;
     }
 
     @Override
@@ -35,7 +38,15 @@ public class emoji_adapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         view= LayoutInflater.from(context).inflate(R.layout.grid_items_for_bottom,viewGroup,false);
         TextView txt= view.findViewById(R.id.item_for_grid);
-        txt.setText(emoji[i]);
+
+        if(type.equals("emoji")){
+            txt.setText(emoji[i]);
+        }else {
+
+            Typeface typeface= Typeface.createFromAsset(context.getAssets(),emoji[i]);
+            txt.setText("Ravi");
+            txt.setTypeface(typeface);
+        }
         return view;
     }
 }
